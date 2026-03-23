@@ -40,7 +40,7 @@ macro_rules! for_each_builtin_structs {
             /// On Windows, the Windows key is mapped to the meta modifier.
             #[derive(Copy, Eq)]
             struct KeyboardModifiers {
-                @name = BuiltinPrivateStruct::KeyboardModifiers,
+                @name = BuiltinPublicStruct::KeyboardModifiers,
                 export {
                     /// Indicates the Alt key on a keyboard.
                     alt: bool,
@@ -211,7 +211,7 @@ macro_rules! for_each_builtin_structs {
                     icon: Image,
                     /// an opaque id that can be used to identify the menu entry
                     id: SharedString,
-                    // keyboard_shortcut: KeySequence,
+                    // keys: KeySequence,
                     /// whether the menu entry is enabled
                     enabled: bool,
                     /// whether the menu entry is checkable
